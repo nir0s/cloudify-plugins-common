@@ -29,7 +29,7 @@ function install_dependencies(){
     fi
     curl --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py | sudo python &&
     sudo pip install --upgrade
-    sudo pip install virtualenv
+    pip install virtualenv
 }
 
 function install_wagon(){
