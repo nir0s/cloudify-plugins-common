@@ -429,6 +429,9 @@ def _host_post_start(host_node_instance):
                 host_node_instance.send_event('Creating Agent'),
                 host_node_instance.execute_operation(
                     'cloudify.interfaces.cloudify_agent.create'),
+                host_node_instance.send_event('Waiting for Agent to start'),
+                host_node_instance.execute_operation(
+                    'cloudify.interfaces.cloudify_agent.wait_for_agent')
             ]
 
     tasks.extend(prepare_running_agent(host_node_instance))
