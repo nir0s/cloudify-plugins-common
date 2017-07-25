@@ -24,11 +24,7 @@ from cloudify.logs import init_cloudify_logger
 from cloudify import constants
 from cloudify import exceptions
 from cloudify import utils
-
-
-DEPLOYMENT = 'deployment'
-NODE_INSTANCE = 'node-instance'
-RELATIONSHIP_INSTANCE = 'relationship-instance'
+from constants import DEPLOYMENT, NODE_INSTANCE, RELATIONSHIP_INSTANCE
 
 
 class ContextCapabilities(object):
